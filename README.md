@@ -35,11 +35,15 @@ Once you upload an image to your repository, you can link link to it like this (
 
    # write your solution here
 
-   for i in range(len(countries)):
-      print("%s %.2f%%" % (countries[i], 100.0))    # current just prints 100%
+import requests
+from pprint import pprint
 
-main()
-```
+API_KEY = 'dd7200192b6c2340d7a7323ee44f87ca'   # to get this key you must register to openweathermap.org
+city = input("Enter a city: ")                 # ask user to enter the city name
+
+base_url = "http://api.openweathermap.org/data/2.5/weather?appid="+API_KEY+"&q="+city # the reqest will send to this link
+weather_date = requests.get(base_url).json()    # get the result 
+pprint(weather_date)   # to print the result 
 
 
 ## Data sources and AI methods
