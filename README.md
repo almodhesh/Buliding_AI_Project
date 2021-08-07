@@ -4,23 +4,23 @@ Buliding AI Project
 created by Reaktor Innovations and University of Helsinki. 
 Copy the template, paste it to your GitHub README and edit! -->
 
-# Building AI 
+# Building AI weather Recommender
 
-Final project for the Building AI course
+this project to build can guide you if you wish to travel within dates is the weather will be good or no 
 
 ## Summary
 
-Describe briefly in 2-3 sentences what your project is about. About 250 characters is a nice length! 
+this project to build can guide you if you wish to travel within dates is the weather will be good or no 
 
 
 ## Background
 
-Which problems does your idea solve? How common or frequent is this problem? What is your personal motivation? Why is this topic important or interesting?
+Must of non traveller facing challenge some times regarding to the weather when they travel. the idea is select with thim the best time during to expected weather 
 
 This is how you make a list, if you need one:
-* problem 1
-* problem 2
-* etc.
+* weather update
+* recommended time 
+
 
 
 ## How is it used?
@@ -29,7 +29,7 @@ Describe the process of using the solution. In what kind situations is the solut
 
 Images will make your README look nice!
 Once you upload an image to your repository, you can link link to it like this (replace the URL with file path, if you've uploaded an image to Github.)
-![Cat](https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg)
+![Cat](Nor'easter 1967-03-22 weather map.jpg)
 
 If you need to resize images, you have to use an HTML tag, like this:
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Sleeping_cat_on_her_back.jpg" width="300">
