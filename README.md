@@ -4,22 +4,18 @@ Buliding AI Project
 created by Reaktor Innovations and University of Helsinki. 
 Copy the template, paste it to your GitHub README and edit! -->
 
-# Building AI weather Recommender
+# Building AI for FaceDetector
 
-this project to build can guide you if you wish to travel within dates is the weather will be good or no 
+this project to build programe to detec the faces in pictures by using python
 
 ## Summary
 
-this project to build can guide you if you wish to travel within dates is the weather will be good or no 
+this project to build programe to detec the faces in pictures by using python
 
 
 ## Background
 
-Must of non traveller facing challenge some times regarding to the weather when they travel. the idea is select with thim the best time during to expected weather 
-
-This is how you make a list, if you need one:
-* weather update
-* recommended time 
+we will use in this project opencv and random library  
 
 
 
@@ -35,15 +31,38 @@ Once you upload an image to your repository, you can link link to it like this (
 
    # write your solution here
 
-import requests
-from pprint import pprint
+ first install python cv 
+ #pip install opencv-python (windows) 
+# pip install python-opencv (linux)
 
-API_KEY = 'dd7200192b6c2340d7a7323ee44f87ca'   # to get this key you must register to openweathermap.org
-city = input("Enter a city: ")                 # ask user to enter the city name
+import cv2
+from random import randrange
 
-base_url = "http://api.openweathermap.org/data/2.5/weather?appid="+API_KEY+"&q="+city # the reqest will send to this link
-weather_date = requests.get(base_url).json()    # get the result 
-pprint(weather_date)   # to print the result 
+# load some pre-trained data on face frontals from opencv (haar cascade algorithm ) 
+trained_face_data = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
+# choose an image to detect faces in 
+#img = cv2.imread('RDJ.png')
+img = cv2.imread('RDJ1.png')
+# Must convert to grayscale
+grayscale_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Detect Faces
+face_coordinates = trained_face_data.detectMultiScale(grayscale_img)
+print(face_coordinates)
+
+# Draw rectangles around the faces
+for (x, y, w, h) in face_coordinates:
+    cv2.rectangle(img,(x,y), (x+w, y+h),(randrange(256),randrange(256),randrange(256)),2)
+
+# Display the imgage with the faces spotted 
+cv2.imshow('Clever Programmer Face Detector', img)
+
+# Wait here in the code and listen for a key press 
+cv2.waitKey()
+
+
+print('code completed')
 
 
 ## Data sources and AI methods
